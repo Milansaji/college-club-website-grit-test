@@ -1,10 +1,10 @@
-# College Music Club CMS 🎸
+# College Club CMS �
 
-A premium, high-performance Single Page Application (SPA) designed to manage college music clubs and their events. Built with the **Grit Go Framework** and **Firebase Firestore**, featuring a stunning glassmorphism UI with smooth animations.
+A premium, high-performance Single Page Application (SPA) designed to manage college clubs and their events. Built with the **Grit Go Framework** and **Firebase Firestore**, featuring a stunning glassmorphism UI with smooth animations.
 
 ## ✨ Features
 
-- **Dynamic Club Management**: Manage multiple campus music clubs with detailed profiles and genres.
+- **Dynamic Club Management**: Manage multiple campus clubs with detailed profiles and genres.
 - **Event Scheduling**: Track upcoming and past events with a dedicated status system (Scheduled, Completed, Postponed, Cancelled).
 - **Automated Filtering**: Events are automatically categorized into "Upcoming" and "Past" based on their status and date.
 - **Admin Portal**: A secure, centralized dashboard to add, edit, or delete clubs and events.

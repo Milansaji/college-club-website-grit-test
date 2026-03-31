@@ -16,7 +16,7 @@ func init() {
 }
 
 // Models
-type MusicClub struct {
+type Club struct {
 	ID           string `json:"id" firestore:"id,omitempty"`
 	Name         string `json:"name" firestore:"name"`
 	Description  string `json:"description" firestore:"description"`
@@ -25,7 +25,7 @@ type MusicClub struct {
 	MembersCount int    `json:"members_count" firestore:"members_count"`
 }
 
-type MusicEvent struct {
+type Event struct {
 	ID          string    `json:"id" firestore:"id,omitempty"`
 	ClubID      string    `json:"club_id" firestore:"club_id"`
 	Title       string    `json:"title" firestore:"title"`
@@ -51,8 +51,8 @@ func main() {
 	grit.InitFirebase(credPath, projectID, firebaseAPI)
 
 	// Register models for Unified CRUD
-	grit.RegisterModel("clubs", &MusicClub{})
-	grit.RegisterModel("events", &MusicEvent{})
+	grit.RegisterModel("clubs", &Club{})
+	grit.RegisterModel("events", &Event{})
 
 	// Initialize router
 	r := grit.NewRouter()
@@ -86,6 +86,6 @@ func main() {
 	// AI Assistant for CMS
 	r.Post("/ai/cms", grit.AICrud("mistral"))
 
-	log.Printf("🎸 College Music Clubs CMS active on port %s", port)
+	log.Printf("🏫 College Clubs CMS active on port %s", port)
 	r.Start(port)
 }
